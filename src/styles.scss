@@ -128,3 +128,25 @@ button:disabled {
     transform: translateY(0);
   }
 }
+
+/* Add typing animation cursor styles */
+.typing-animation::after {
+  content: '|';
+  position: absolute;
+  right: -10px;
+  animation: blink 0.7s infinite;
+}
+
+.typing-complete::after {
+  content: '';
+  animation: none;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

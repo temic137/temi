@@ -10,6 +10,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SpaceBackgroundComponent } from './components/space-background/space-background.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SpaceBackgroundComponent } from './components/space-background/space-ba
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
