@@ -1,0 +1,152 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+/* Space theme variables */
+:root {
+  --space-black: #0a0a0a;
+  --space-dark: #121212;
+  --space-accent: #4a6fa5;
+  --space-text: #ffffff;
+  --space-text-secondary: #b3b3b3;
+  --space-border: rgba(255, 255, 255, 0.1);
+  --section-padding: 5rem 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--space-text);
+  background-color: var(--space-black);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Improved text readability */
+p {
+  letter-spacing: 0.3px;
+  word-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--space-text);
+  transition: opacity 0.3s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--space-accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #3a5a8c;
+}
+
+.section {
+  padding: var(--section-padding);
+  scroll-margin-top: 70px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-align: left;
+  color: var(--space-text);
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: left;
+}
+
+/* Space theme specific styles */
+.space-title {
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 1px;
+}
+
+.glow-text {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Form styles */
+input, textarea, button {
+  font-family: 'Poppins', sans-serif;
+}
+
+input.ng-invalid.ng-touched, 
+textarea.ng-invalid.ng-touched {
+  border-color: #ff4d4d !important;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Animation utilities */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add typing animation cursor styles */
+.typing-animation::after {
+  content: '|';
+  position: absolute;
+  right: -10px;
+  animation: blink 0.7s infinite;
+}
+
+.typing-complete::after {
+  content: '';
+  animation: none;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
